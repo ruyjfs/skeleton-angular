@@ -4,19 +4,46 @@ import { trigger, state, animate, transition, style } from '@angular/animations'
 export const fadeInAnimation =
     // trigger name for attaching this animation to an element using the [@triggerName] syntax
     trigger('fadeInAnimation', [
-
-        // route 'enter' transition
-        transition(':enter', [
-
-            style({ opacity: 0 , backgroundColor: 'rgba(0, 0, 0, 0.8)'}),
-            animate(1000, style({ opacity: 1 }))
-
-            // css styles at start of transition
-            // style({ opacity: 0 }),
-
-            // animation and styles at end of transition
-            // animate('.3s', style({ opacity: 1 }))
+        // style({ opacity: 0 , backgroundColor: 'rgba(0, 0, 0, 0.8)'}),
+        // animate('6s cubic-bezier(.35,0,.25,1)', style({ opacity: 1 })),
+        // state('inactive', style({
+        //     backgroundColor: '#eee',
+        //     transform: 'scale(1)'
+        // })),
+        // state('active',   style({
+        //     backgroundColor: '#cfd8dc',
+        //     transform: 'scale(1.1)'
+        // })),
+        // transition('inactive => active', animate('100ms ease-in')),
+        // transition('active => inactive', animate('100ms ease-out')),
+        transition(":enter", [
+            style({ opacity: 0 , color: 'red'}),
+            // animate(500, style({ opacity: 1 }))
+            // animate('6s cubic-bezier(.35,0,.25,1)', style({ opacity: 1 })),
+            animate('3s', style({ opacity: 1 , color: 'green'}))
         ]),
+        transition(":leave", [
+            style({ opacity: 1 , color: 'green'}),
+            // animate(500, style({ opacity: 0 }))
+            // animate('.3s', style({ opacity: 0 }))
+            // animate('6s cubic-bezier(.35,0,.25,1)', style({ opacity: 0 })),
+        ]),
+        // route 'enter' transition
+        // transition('* => *', [
+        //
+        //     // style({ opacity: 0 , backgroundColor: 'rgba(0, 0, 0, 0.8)'}),
+        //     // animate(1000, style({ opacity: 1 }))
+        //
+        //     // css styles at start of transition
+        //     style({ opacity: 0 }),
+        //     // animation and styles at end of transition
+        //     animate('6s cubic-bezier(.35,0,.25,1)', style({ opacity: 1 })),
+        //     // css styles at start of transition
+        //     // style({ opacity: 0 }),
+        //
+        //     // animation and styles at end of transition
+        //     // animate('.3s', style({ opacity: 1 }))
+        // ]),
     ]);
 
 export const slideInOutAnimation =
