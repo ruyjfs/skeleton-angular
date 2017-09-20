@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { fadeInAnimation } from '../../_animations/index';
+import { fadeInAnimation } from '../../../_animations/index';
 
 @Component({
   moduleId: module.id.toString(),

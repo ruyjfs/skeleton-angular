@@ -1,6 +1,11 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <md-toolbar class="mat-elevation-z6">
-  {{title}} asdaa
+  <span>{{title}}</span>
+  <button routerLink="/home" routerLinkActive="active" md-button>Home</button>
+  <button routerLink="/about" routerLinkActive="active" md-button>About</button>
+  <span class="spacer"></span>
+  <button md-icon-button routerLink="/login">
+    <md-icon class="md-24" aria-label="Example icon-button with a heart icon">person</md-icon>
+  </button>
 </md-toolbar>
 <!--<div style="text-align:center">-->
   <!--<h1>-->
@@ -22,7 +27,7 @@
   <!--</li>-->
 <!--</ul>-->
 <nav>
-  <a routerLink="/login" routerLinkActive="active">Login</a>
-  <a routerLink="/home" routerLinkActive="active">Home</a>
+  <!--<a routerLink="/login" routerLinkActive="active">Login</a>-->
+  <!--<a routerLink="/home" routerLinkActive="active">Home</a>-->
 </nav>
 <router-outlet></router-outlet>
