@@ -12,19 +12,22 @@ export const fadeInAnimation =
         //     backgroundColor: '#eee',
         //     transform: 'scale(1)'
         // })),
-        state('*', style({ opacity: 0 , color: 'red', transition: 'opacity 3s'})),
+        // state('*', style({ opacity: 0 , color: 'red', transition: 'opacity 3s'})),
+        state('*', style({ opacity: 0 , transition: 'opacity 3s'})),
         // transition('inactive => active', animate('100ms ease-in')),
         // transition('active => inactive', animate('100ms ease-out')),
         transition(":enter", [
-            style({ opacity: 0 , color: 'red', display: 'none'}),
+            style({ opacity: 0 , display: 'none'}),
             // animate(500, style({ opacity: 1 }))
             // animate('6s cubic-bezier(.35,0,.25,1)', style({ opacity: 1 })),
-            animate('2s', style({ opacity: 1 , color: 'green', display: 'inherit'}))
+            // animate('2s', style({ opacity: 1 , color: 'green', display: 'inherit'}))
+            animate('2s', style({ opacity: 1 , display: 'inherit'}))
         ]),
         transition(":leave", [
             // style({ opacity: 1 , color: 'green', display: 'none'}),
             // animate(500, style({ opacity: 0 }))
             // animate('.1s', style({ opacity: 0 , display: 'none'}))
+            // animate('0.5s', style({ opacity: 0 , display: 'none'}))
             // animate('6s cubic-bezier(.35,0,.25,1)', style('{ opacity: 0 })),
         ]),
         // route 'enter' transition

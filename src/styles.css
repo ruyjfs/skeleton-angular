@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body {
   /*background: #303030;*/
-  margin: 0;
 }
 
 .example-icon {
@@ -10,4 +9,21 @@ body {
 
 .spacer {
   flex: 1 1 auto;
+}
+
+footer {
+  /*color: #FFFFFF;*/
+  /*background-color: rgb(93,64,55);*/
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+body, app-root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background: transparent;
+  width: 100%;
 }

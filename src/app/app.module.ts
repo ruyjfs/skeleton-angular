@@ -1,13 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MdButtonModule, MdCheckboxModule, MdToolbarModule, MdProgressSpinnerModule, MdIconModule, MdCardModule} from '@angular/material';
+import { RouterModule, Routes } from '@angular/router';
+
+import 'hammerjs';
+import 'materialize-css';
+// import { MaterializeModule } from "angular2-materialize";
 
 import { AppComponent } from './app.component';
-
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MdButtonModule, MdCheckboxModule, MdToolbarModule, MdProgressSpinnerModule, MdIconModule} from '@angular/material';
-import 'hammerjs';
-
-import { RouterModule, Routes } from '@angular/router';
 
 // Routes
 import { LoginComponent } from './main/login/login.component';
@@ -30,11 +31,12 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule, BrowserAnimationsModule,
     RouterModule,
-    MdButtonModule, MdCheckboxModule, MdProgressSpinnerModule, MdToolbarModule, MdIconModule,
+    MdButtonModule, MdCheckboxModule, MdProgressSpinnerModule, MdToolbarModule, MdIconModule, MdCardModule,
     RouterModule.forRoot(
         appRoutes,
         { enableTracing: false } // <-- debugging purposes only
-    )
+    ),
+    // MaterializeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,33 +1,87 @@
-<md-toolbar class="mat-elevation-z6">
-  <span>{{title}}</span>
-  <button routerLink="/home" routerLinkActive="active" md-button>Home</button>
-  <button routerLink="/about" routerLinkActive="active" md-button>About</button>
-  <span class="spacer"></span>
-  <button md-icon-button routerLink="/login">
-    <md-icon class="md-24" aria-label="Example icon-button with a heart icon">person</md-icon>
-  </button>
-</md-toolbar>
 <!--<div style="text-align:center">-->
-  <!--<h1>-->
-    <!--Welcome to {{title}}!-->
-  <!--</h1>-->
-  <!--<img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">-->
+<!--<h1>-->
+<!--Welcome to {{title}}!-->
+<!--</h1>-->
+<!--<img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">-->
 <!--</div>-->
 <!--<h2>Here are some links to help you start: </h2>-->
 <!--<ul>-->
-  <!--&lt;!&ndash;<form>&ndash;&gt;-->
-  <!--<li>-->
-    <!--<h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>-->
-  <!--</li>-->
-  <!--<li>-->
-    <!--<h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>-->
-  <!--</li>-->
-  <!--<li>-->
-    <!--<h2><a target="_blank" href="https://blog.angular.io/">Angular blog</a></h2>-->
-  <!--</li>-->
+<!--&lt;!&ndash;<form>&ndash;&gt;-->
+<!--<li>-->
+<!--<h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>-->
+<!--</li>-->
+<!--<li>-->
+<!--<h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>-->
+<!--</li>-->
+<!--<li>-->
+<!--<h2><a target="_blank" href="https://blog.angular.io/">Angular blog</a></h2>-->
+<!--</li>-->
 <!--</ul>-->
-<nav>
-  <!--<a routerLink="/login" routerLinkActive="active">Login</a>-->
-  <!--<a routerLink="/home" routerLinkActive="active">Home</a>-->
-</nav>
-<router-outlet></router-outlet>
+<!--<nav>-->
+<!--<a routerLink="/login" routerLinkActive="active">Login</a>-->
+<!--<a routerLink="/home" routerLinkActive="active">Home</a>-->
+<!--</nav>-->
+<header>
+    <!--<md-toolbar class="mat-elevation-z6"  color="primary">-->
+    <!--<span>{{title}}</span>-->
+    <!--<button routerLink="/home" routerLinkActive="active" md-button>Home</button>-->
+    <!--<button routerLink="/about" routerLinkActive="active" md-button>About</button>-->
+    <!--<span class="spacer"></span>-->
+    <!--<button md-icon-button routerLink="/login">-->
+    <!--<md-icon class="md-24" aria-label="Example icon-button with a heart icon">person</md-icon>-->
+    <!--</button>-->
+    <!--</md-toolbar>-->
+
+    <div class="navbar-fixed">
+        <nav class="light-blue">
+            <div class="nav-wrapper container">
+                <a href="#" class="brand-logo">{{title}}</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a routerLink="/home">Home</a></li>
+                    <li><a routerLink="/about">About</a></li>
+                    <li><a routerLink="/login">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+<main>
+    <router-outlet ></router-outlet>
+</main>
+<footer class="page-footer orange">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Company Bio</h5>
+                <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's
+                    our full time job. Any amount would help support and continue development on this project and is
+                    greatly appreciated.</p>
+
+
+            </div>
+            <div class="col l3 s12">
+                <h5 class="white-text">Settings</h5>
+                <ul>
+                    <li><a class="white-text" href="#!">Link 1</a></li>
+                    <li><a class="white-text" href="#!">Link 2</a></li>
+                    <li><a class="white-text" href="#!">Link 3</a></li>
+                    <li><a class="white-text" href="#!">Link 4</a></li>
+                </ul>
+            </div>
+            <div class="col l3 s12">
+                <h5 class="white-text">Connect</h5>
+                <ul>
+                    <li><a class="white-text" href="#!">Link 1</a></li>
+                    <li><a class="white-text" href="#!">Link 2</a></li>
+                    <li><a class="white-text" href="#!">Link 3</a></li>
+                    <li><a class="white-text" href="#!">Link 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Made by <a class="orange-text text-lighten-3" href="https://github.com/ryubr" target="_blank">RyuBR</a>
+        </div>
+    </div>
+</footer>
