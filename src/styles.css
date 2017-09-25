@@ -27,3 +27,7 @@ body, app-root {
   background: transparent;
   width: 100%;
 }
+
+form button {
+  width: 100%;
+}

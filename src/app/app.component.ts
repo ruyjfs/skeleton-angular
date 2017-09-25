@@ -13,5 +13,5 @@ import { fadeInAnimation } from '../_animations/index';
   host: { '[@fadeInAnimation]': '' }
 })
 export class AppComponent {
-  title = 'App';
+  title = 'Skeleton Angular PWA';
 }

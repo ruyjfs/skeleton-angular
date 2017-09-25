@@ -1,5 +1,5 @@
 .example-card {
-    width: 400px;
+    /*width: 400px;*/
 }
 
 .example-header-image {
@@ -7,6 +7,21 @@
     background-size: cover;
 }
 
+md-card-content , md-tab-body , md-card, .mat-tab-body-content{
+    -webkit-transition: height 2s; /* Safari */
+    transition: height 2s;
+}
+
 md-card {
     margin-top: 40px;
+}
+
+.mat-card {
+    padding: 0;
+}
+
+md-card-content form {
+    padding: 24px;
+    -webkit-transition: height 2s; /* Safari */
+    transition: height 2s;
 }
