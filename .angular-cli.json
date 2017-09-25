@@ -18,6 +18,7 @@
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
+      "serviceWorker": true,
       "styles": [
         "../node_modules/materialize-css/dist/css/materialize.min.css",
         "assets/material-angular/dark-orange.scss",
@@ -63,10 +64,11 @@
   },
   "defaults": {
     "styleExt": "css",
-    "component": {},
+    "component": {
+    },
     "serve": {
-      "host": "0.0.0.0",
-      "port": 4200
+      "port": 4200,
+      "host": "0.0.0.0"
     }
   }
 }
