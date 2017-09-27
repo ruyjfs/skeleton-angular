@@ -4,6 +4,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MdButtonModule, MdCheckboxModule, MdToolbarModule, MdProgressSpinnerModule, MdIconModule, MdCardModule, MdInputModule, MdTabsModule} from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
 
+import { AppShellModule } from '@angular/app-shell'; // PWA
+import { ServiceWorkerModule } from '@angular/service-worker'; // PWA
+
 import 'hammerjs';
 import 'materialize-css';
 // import { MaterializeModule } from "angular2-materialize";
@@ -36,7 +39,9 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule, BrowserAnimationsModule,
     RouterModule,
-    MdButtonModule, MdCheckboxModule, MdProgressSpinnerModule, MdToolbarModule, MdIconModule, MdCardModule, MdInputModule, MdTabsModule,
+    MdButtonModule, MdCheckboxModule, MdProgressSpinnerModule, MdToolbarModule, MdIconModule, MdCardModule, MdInputModule, MdTabsModule, // Material Designe
+    AppShellModule.runtime(),
+    ServiceWorkerModule, //PWA
     RouterModule.forRoot(
         appRoutes,
         { enableTracing: false } // <-- debugging purposes only

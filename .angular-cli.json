@@ -9,8 +9,11 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.ico",
+        "assets/pwa/manifest.json",
+        "assets/pwa/service-worker.js"
       ],
+      "mobile": true,
       "index": "index.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",

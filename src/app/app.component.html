@@ -47,7 +47,10 @@
     </div>
 </header>
 <main>
-    <router-outlet></router-outlet>
+    <md-spinner *shellRender></md-spinner>
+    <router-outlet *shellNoRender></router-outlet>
+    <!--<md-spinner></md-spinner>-->
+    <!--<router-outlet></router-outlet>-->
 </main>
 <footer class="page-footer amber darken-4">
     <div class="container">
